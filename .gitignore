@@ -1,0 +1,9 @@
+node_modules/
+.expo/
+.expo-shared/
+*.log
+__pycache__/
+*.pyc
+.env
+.vscode/
+*.sqlite
