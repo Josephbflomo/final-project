@@ -1,0 +1,503 @@
+
+/* ========================================
+   1. COLORS AND GENERAL SETTINGS
+======================================== */
+
+:root {
+    --black: #111111;
+    --black-soft: #1b1b1b;
+    --gold: #d2ad5b;
+    --gold-light: #f0d995;
+    --cream: #fff9e9;
+    --white: #ffffff;
+    --gray: #6d6d6d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f1e9;
+    color: var(--black);
+    line-height: 1.5;
+}
+
+.page-container {
+    width: min(100% - 24px, 760px);
+    margin: 25px auto;
+}
+
+/* ========================================
+   2. PAGE HEADER
+======================================== */
+
+.site-header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.small-heading {
+    color: #94732f;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.site-header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(26px, 5vw, 36px);
+    margin: 7px 0;
+}
+
+.site-header > p:last-child {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+/* ========================================
+   3. GUEST FORM
+======================================== */
+
+.form-card {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto 25px;
+    padding: 23px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.form-card h2 {
+    margin: 0 0 5px;
+    font-size: 21px;
+}
+
+.form-description {
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 0;
+}
+
+.form-card label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 16px 0 6px;
+}
+
+.form-card select,
+.form-card input {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    font: inherit;
+    font-size: 14px;
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid #d5d0c5;
+    border-radius: 6px;
+}
+
+.form-card select:focus,
+.form-card input:focus {
+    outline: 2px solid var(--gold);
+    border-color: var(--gold);
+}
+
+.button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.button-gold {
+    background: var(--black);
+    color: var(--gold-light);
+    border: 1px solid var(--gold);
+}
+
+.button-gold:hover {
+    background: #343027;
+}
+
+.button-light {
+    background: #eee9dd;
+    color: var(--black);
+}
+
+.button-dark {
+    background: #343434;
+    color: var(--white);
+}
+
+#invitationForm .button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.privacy-note {
+    margin-bottom: 0;
+    color: var(--gray);
+    font-size: 11px;
+    text-align: center;
+}
+
+/* ========================================
+   4. SMALL INVITATION CARD
+======================================== */
+
+.invitation {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 5px;
+    background: var(--black);
+    color: var(--cream);
+    border: 1px solid var(--gold);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.invitation-border {
+    padding: 12px 10px;
+    text-align: center;
+    border: 1px solid var(--gold);
+    background: var(--black);
+}
+
+/* ========================================
+   5. INVITATION PHOTO
+======================================== */
+
+.invitation .photo-frame {
+    width: 68px;
+    height: 68px;
+    padding: 3px;
+    margin: 0 auto 8px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--black);
+}
+
+.invitation .graduate-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 50%;
+}
+
+/* ========================================
+   6. INVITATION TEXT AND DECORATION
+======================================== */
+
+.invitation-kicker {
+    margin: 0 0 10px;
+    color: var(--gold-light);
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.university-name {
+    margin: 8px 0;
+    color: var(--gold-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+}
+
+.ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    max-width: 155px;
+    margin: 8px auto;
+    color: var(--gold);
+}
+
+.ornament span:not(.ornament-symbol) {
+    flex: 1;
+    height: 1px;
+    background: var(--gold);
+}
+
+.ornament-symbol {
+    font-size: 9px;
+}
+
+.invitation-title {
+    margin: 9px 0;
+    color: var(--gold-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    line-height: 1.12;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.invited-message,
+.event-message {
+    margin: 8px 0 4px;
+    color: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.guest-name {
+    margin: 6px 0;
+    color: var(--gold-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: normal;
+    overflow-wrap: anywhere;
+}
+
+.graduate-name {
+    margin: 6px 0;
+    color: var(--gold-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    overflow-wrap: anywhere;
+}
+
+.degree-message {
+    max-width: 240px;
+    margin: 7px auto 10px;
+    color: #e8dfca;
+    font-size: 10px;
+}
+
+/* ========================================
+   7. EVENT DETAILS
+======================================== */
+
+.event-details {
+    display: grid;
+    gap: 8px;
+    margin: 10px 0;
+    padding: 10px 3px;
+    border-top: 1px solid #6d592f;
+    border-bottom: 1px solid #6d592f;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.detail-label {
+    color: var(--gold);
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.detail strong {
+    color: var(--cream);
+    font-size: 10px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.closing-message {
+    margin: 9px 0 5px;
+    color: var(--gold-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.bottom-ornament {
+    margin-top: 5px;
+    color: var(--gold);
+    font-size: 11px;
+}
+
+/* ========================================
+   8. ACTION BUTTONS AND FOOTER
+======================================== */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 18px auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.site-footer {
+    margin: 25px 0;
+    color: var(--gray);
+    font-size: 11px;
+    text-align: center;
+}
+
+/* ========================================
+   9. MOBILE RESPONSIVENESS
+======================================== */
+
+@media screen and (max-width: 480px) {
+    .page-container {
+        width: calc(100% - 20px);
+        margin: 18px auto;
+    }
+
+    .form-card {
+        padding: 18px;
+    }
+
+    .invitation {
+        max-width: 280px;
+    }
+
+    .invitation-border {
+        padding: 10px 8px;
+    }
+
+    .invitation-title {
+        font-size: 21px;
+    }
+
+    .guest-name {
+        font-size: 18px;
+    }
+}
+
+/* ========================================
+   10. PRINT AND SAVE AS PDF
+======================================== */
+
+@page {
+    size: A4 portrait;
+    margin: 10mm;
+}
+
+@media print {
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .page-container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .site-header,
+    .form-card,
+    .actions,
+    .site-footer {
+        display: none !important;
+    }
+
+    .invitation {
+        display: block !important;
+        width: 75mm !important;
+        max-width: 75mm !important;
+        margin: 0 auto !important;
+        padding: 4px;
+        box-shadow: none;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .invitation-border {
+        padding: 9px 7px;
+    }
+
+    .invitation .photo-frame {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 6px;
+    }
+
+    .invitation-kicker {
+        font-size: 7px;
+        margin-bottom: 7px;
+    }
+
+    .university-name {
+        font-size: 10px;
+        margin: 6px 0;
+    }
+
+    .invitation-title {
+        font-size: 20px;
+        margin: 7px 0;
+    }
+
+    .invited-message,
+    .event-message {
+        font-size: 9px;
+        margin: 6px 0 3px;
+    }
+
+    .guest-name {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .graduate-name {
+        font-size: 15px;
+        margin: 5px 0;
+    }
+
+    .degree-message {
+        font-size: 9px;
+        margin: 5px auto 7px;
+    }
+
+    .event-details {
+        gap: 6px;
+        margin: 7px 0;
+        padding: 7px 2px;
+    }
+
+    .detail-label {
+        font-size: 7px;
+    }
+
+    .detail strong {
+        font-size: 9px;
+    }
+
+    .closing-message {
+        font-size: 9px;
+        margin: 6px 0 3px;
+    }
+
+    .bottom-ornament {
+        font-size: 9px;
+    }
+}

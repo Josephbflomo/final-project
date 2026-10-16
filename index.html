@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Graduation Invitation | Joseph B Flomo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="page-container">
+
+        <header class="site-header">
+            <p class="small-heading">A SPECIAL MILESTONE</p>
+            <h1>Graduation Invitation</h1>
+            <p>Create your personal invitation below.</p>
+        </header>
+
+        <section class="form-card" id="guestFormSection">
+            <h2>Get Your Invitation</h2>
+            <p class="form-description">
+                Enter your details to personalize your invitation.
+            </p>
+
+            <form id="invitationForm">
+
+                <label for="guestTitle">Your title</label>
+                <select id="guestTitle" required>
+                    <option value="">Choose your title</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Miss">Miss</option>
+                </select>
+
+                <label for="guestFullName">Your full name</label>
+                <input
+                    type="text"
+                    id="guestFullName"
+                    placeholder="Enter your full name"
+                    maxlength="100"
+                    autocomplete="name"
+                    required
+                >
+
+                <button type="submit" class="button button-gold">
+                    Print Invitation
+                </button>
+
+                <p class="privacy-note">
+                    Your details are used only to create your invitation.
+                </p>
+            </form>
+        </section>
+
+        <section id="invitationSection" class="invitation hidden">
+
+            <div class="invitation-border">
+
+                <p class="invitation-kicker">
+                    YOU ARE CORDIALLY INVITED
+                </p>
+
+                <div class="photo-frame">
+                    <img
+                        src="pic.jpeg"
+                        alt="Joseph B Flomo in graduation attire"
+                        class="graduate-photo"
+                    >
+                </div>
+
+                <p class="university-name">STARZ UNIVERSITY</p>
+
+                <div class="ornament">
+                    <span></span>
+                    <span class="ornament-symbol">◆</span>
+                    <span></span>
+                </div>
+
+                <h2 class="invitation-title">
+                    Graduation<br>Invitation
+                </h2>
+
+                <p class="invited-message">
+                    With joy and gratitude, I invite
+                </p>
+
+                <h3 id="displayGuestName" class="guest-name">
+                    Guest Name
+                </h3>
+
+                <p class="event-message">
+                    to celebrate the graduation of
+                </p>
+
+                <p class="graduate-name">JOSEPH B FLOMO</p>
+
+                <p class="degree-message">
+                    as I celebrate this important academic milestone.
+                </p>
+
+                <div class="event-details">
+
+                    <div class="detail">
+                        <span class="detail-label">DATE</span>
+                        <strong>November 24, 2026</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span class="detail-label">TIME</span>
+                        <strong>10:00 AM</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span class="detail-label">VENUE</span>
+                        <strong>
+                            Monrovia Christian Fellowship<br>
+                            9th Street, Sinkor
+                        </strong>
+                    </div>
+
+                </div>
+
+                <p class="closing-message">
+                    Your presence will make this day special.
+                </p>
+
+                <div class="bottom-ornament">✦</div>
+
+            </div>
+        </section>
+
+        <div id="invitationActions" class="actions hidden">
+
+            <button type="button" id="printButton"
+                    class="button button-gold">
+                Print / Save as PDF
+            </button>
+
+            <button type="button" id="editButton"
+                    class="button button-light">
+                Edit Name
+            </button>
+
+            <button type="button" id="newInvitationButton"
+                    class="button button-dark">
+                New Invitation
+            </button>
+
+        </div>
+
+        <footer class="site-footer">
+            <p>Designed for the graduation of Joseph B Flomo</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
